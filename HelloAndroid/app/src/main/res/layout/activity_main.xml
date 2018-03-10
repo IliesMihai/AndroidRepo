@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.helloandroid.MainActivity"
+    android:background="#efefef">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/hello_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/udacity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hello_image"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/business_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Udacity"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:drawableRight="@android:drawable/ic_menu_call"
+                android:layout_marginTop="15dp"
+                android:text="650-555-5555"
+                android:contextClickable="true"
+                android:onClick="makeCall"/>
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:drawableRight="@android:drawable/ic_menu_mapmode"
+                android:layout_marginTop="15dp"
+                android:text="2465 Latham St, \n\nMountain View, CA 94043"
+                android:contextClickable="true"
+                android:onClick="goToAddress"/>
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:drawableRight="@android:drawable/ic_menu_info_details"
+                android:layout_marginTop="15dp"
+                android:text="www.udacity.com"
+                android:textColor="@android:color/black"
+                android:contextClickable="true"
+                android:onClick="accessWebSite"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
